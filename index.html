@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Simplex</title>
+<meta charset="utf-8">
+<link rel="icon" href="images/favicon.ico">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/camera.css">
+<link rel="stylesheet" href="css/form.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+<script src="js/jquery.equalheights.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+<script src="js/tms-0.4.1.js"></script>
+<script>
+$(document).ready(function () {
+    $('.slider_wrapper')._TMS({
+        show: 0,
+        pauseOnHover: false,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true, //'.pagination',true,'<ul></ul>'
+        pagNums: false,
+        slideshow: 8000,
+        numStatus: false,
+        banners: 'fade',
+        waitBannerAnimation: false,
+        progressBar: false
+    });
+});
+$(document).ready(function () {
+    ! function () {
+        var map = [],
+            names = [],
+            win = $(window),
+            header = $('header'),
+            currClass
+            $('.content').each(function (n) {
+                map[n] = this.offsetTop
+                names[n] = $(this).attr('id')
+            })
+            win
+                .on('scroll', function () {
+                    var i = 0
+                    while (map[i++] <= win.scrollTop());
+                    if (currClass !== names[i - 2])
+                        currClass = names[i - 2]
+                    header.removeAttr("class").addClass(names[i - 2])
+                })
+    }();
+});
+function goToByScroll(id) {
+    $('html,body').animate({
+        scrollTop: $("#" + id).offset().top
+    }, 'slow');
+}
+$(document).ready(function () {
+    $().UItoTop({
+        easingType: 'easeOutQuart'
+    });
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body>
+<header class="page1">
+  <div class="container_12">
+    <div class="grid_12">
+      <h1><a href="#" onClick="goToByScroll('page1'); return false;"><!--img src="images/logo.png" alt=""--></a></h1>
+      <div class="menu_block">
+        <nav class="">
+          <ul class="sf-menu">
+            <li class="current men"><a onClick="goToByScroll('page1'); return false;" href="#">Home </a> <strong class="hover"></strong></li>
+            <li class="men1"><a onClick="goToByScroll('page2'); return false;" href="#">Memoir</a><strong class="hover"></strong></li>
+            <li class=" men2"><a onClick="goToByScroll('page3'); return false;" href="#">Projects</a> <strong class="hover"></strong></li>
+            <li class=" men3"><a onClick="goToByScroll('page4'); return false;" href="#">Endeavors</a> <strong class="hover"></strong></li>
+            <li class=" men4"><a onClick="goToByScroll('page5'); return false;" href="#">Contact</a> <strong class="hover"></strong></li>
+          </ul>
+        </nav>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</header>
+<div id="page1" class="content">
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slider_wrapper">
+        <ul class="items">
+          <li> <img src="images/spacer.gif" alt="">
+            <div class="caption banner">
+              <h2>Everything you can imagine is Real.</h2>
+              <h3>Pablo Picasso</h3>
+            </div>
+          </li>
+          <li> <img src="images/spacer.gif" alt="">
+            <div class="caption banner">
+              <h2>Parth Milind Desai</h2>
+              <h3>Sketch</h3>
+            </div>
+          </li>
+          <li> <img src="images/spacer.gif" alt="">
+            <div class="caption banner">
+              <h2>Master's in Electrical Engineering</h2>
+              <h3>Control Systems Major</h3>
+            </div>
+          </li>
+          <li> <img src="images/spacer.gif" alt="">
+            <div class="caption banner">
+              <h2>Competency</h2>
+              <div class="text1"> Product Development, Circuit Design & Programming</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="socials"> <a href="#"></a> <a href="https://plus.google.com/116455413084064297095/posts"></a> <a href="https://www.linkedin.com/in/parthdesai777"></a> <!--a href="#"></a--> </div>
+    </div>
+  </div>
+</div>
+<div id="page2" class="content">
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <h3>~: About Me :~</h3>
+        <div>The knowledge of all things is possible. <br> Leonardo da Vinci <br> <br>
+             Hello Everyone!!! Welcome to my Webpage <br> <br>
+             By profession, I am an electrical engineer, however, I have always been curious about everything, <br>
+             be it natural or man-made, be it existing or even if it is just a hypothesis. Curiosity of knowledge
+             has always been driving me and guiding my actions. <br>
+             Although, my interests drove me virtually everywhere, I was highly inspired by the idea of Robots <br>
+             (from constructing to programming one) which motivated me to seek my career in Engineering. After
+             completing my schooling, I started my career with a Diploma in Digital Electronics which further
+             fueled my curiosity in electronics circuit design and I pursued my Bachelor's Degree in Electronics
+             Engineering from Mumbai University. I completed my bachelor's degree in 2009 and my first Job was as
+             a Design Engineer at the Tata Power Co. Ltd. Strategic Engineering Division. At work, my abilities
+             grew exponentially and I gained a lot of experience in circuit design and product design. During my
+             tenure at TATA Power SED, I rose from a Design Engineer to a Product Design Engineer and ultimately
+             to an Executive Engineer. In 2013, I took a very strong and difficult decision to leave the company
+             in order to enhance my career and pursue further knowledge in the field of Robotics. In Spring 2014,
+             I started my Master's in Electrical Engineering with a major in controls systems from Missouri
+             University of Science and Technology, Rolla, USA recognized for its education in diverse engineering
+             fields. I completed my Master's in fall 2015. Currently I am trying to explore ways to utilize my
+             education, knowledge and experience to build something useful. <br>
+             I have gone through various experiences and up's and down's which has allowed me to reach a position
+             where; now, I am confident to design a system on my own from scratch. <br> <br>
+             This website is an attempt to organize various projects that I have worked on throughout my career,
+             and to spread the knowledge I have gained, to anyone looking for some guidance with similar interests. <br>
+             And yes, I have also shared some of my personal interests which provide me enough relaxation and help
+             me be motivated on my quest for the search for knowledge.<br> <br>
+             Have fun exploring my webpage. <br>
+             If you have any suggestions / comments, post on my twitter handle.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="page3" class="content">
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <h3>~: Projects :~</h3>
+        <div> This section includes details about various projects I have worked on and the
+        links to some of the related documentation currently available. This documentation involves:
+        project reports, code, presentations, etc.
+        <!--PLEASE NOTE <br>
+        The information available in all the documents is free for viewing and usage. However, if you wish
+        to use the content from any of these documents, please use the citation of the website given
+        below: <br> <br>
+        <h6>"P. Desai, Pristine777.github.io, 2015. [Online]. Available: http://pristine777.github.io. [Accessed: Date_of_Access]." </h6>-->
+        </div>
+      </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="images/soccer_final.jpg" alt="">
+        <div><!--a href="#"-->Q-LEARNING BASED INTELLIGENT SOCCER PLAYER<!--/a--><br> <br> </div>
+        This project was an attempt to study the Q-learning algorithm, which is one of the most popularly
+        known methods of reinforcement learning. The objective of the project was to build the
+        intelligence for a soccer agent (soccer player) to score maximum goals. <br> <br>
+        The motivation this project was an attempt to understand and see for real how the autonomous
+        learning can be implemented for training the agents through experience. Although this method
+        is very primitive, however, this turned to be very useful for me in understanding the idea
+        behind decision making based on real time environment and dynamic situations. <br> <br>
+        Click on below links to access specific documentation regarding this project. <br> <br>
+        <a href="https://www.dropbox.com/s/1brlz9xrgfit4of/EE6360_Project_Report_Desai_Parth.pdf?dl=0"> REPORT </a> <br>
+        <a href="https://www.dropbox.com/s/exvirs7phzicawl/agent1.m?dl=0"> MATLAB AGENT CODE </a> <br>
+        <a href="https://www.dropbox.com/s/emyg75tfvg0q5zd/Read_Me.txt?dl=0"> OPERATING INSTRUCTIONS</a> <br>
+        </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="images/Copter_final.png" alt="">
+        <div><!--a href="#"-->COMPARISON OF PID AND LQR BASED QUAD-COPTER CONTROLLER DESIGNS<!--/a--> <br> <br> </div>
+        The goal behind this project was to study the functionality of the Linear-Quadratic-Regulator
+        based controller design for highly non-linear systems. The major hurdle in the implementation
+        was the interpretation of the non-linear dynamics of the Quad-copter system. It included
+        understanding the theory behind 3-Dimensional flight dynamics. <br> <br>
+        The performance of the LQR controller is compared with the conventional PID controller to
+        record the difference in performance. This project is the replication of the results
+        (for course-work purposes) of an already published IEEE paper which has been cited in the
+        project report. <br> <br>
+        Click on below links to access specific documentation regarding this project. <br> <br>
+        <a href="https://www.dropbox.com/s/pw1my6977dw12cx/Desai_Parth_Report_12MAY15.pdf?dl=0"> REPORT </a> <br>
+        MATLAB CODE: <br> <a href="https://www.dropbox.com/s/u1l2nptovn8w79o/Main_LQR_Control.m?dl=0"> File 1 </a>
+                     <a href="https://www.dropbox.com/s/o9iv7bk0c1brhlp/Regulator.m?dl=0"> File 2 </a>
+                     <a href="https://www.dropbox.com/s/gbri844rijzxcbw/Tracker.m?dl=0"> File 3 </a> <br>
+        <a href="https://www.dropbox.com/s/fp0flywbxi30r5x/Vertical_System_Control_PID.slx?dl=0"> SIMULINK MODEL </a> <br>
+        </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="images/PID.png" alt="">
+        <div><!--a href="#"-->ANALYSIS OF INTELLIGENT PID CONTROLLER USING MULTI-LAYER NEURAL NETWORK<!--/a--> <br> <br> </div>
+        In the conventional PID controller, the controller gains are fixed for an operating point.
+        In this project, a neural network is designed which determines the PID controller gains
+        for every time step based on the current available output. This allows better control
+        over the system. <br> <br>
+        This project is the replication of the results (for course-work purposes) of an already
+        published IEEE paper which has been cited in the project report. I was not able to
+        simulate all the conditions. The controlled response for a non-linear system failed.
+        I have plans to re-write the code to simulate the non-linear system. <br> <br>
+        In process for creating useful documentation for the project. <br> <br>
+        </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="images/FCCU_final.jpg" alt="">
+        <div><!--a href="#"-->DISTURBANCE CONTROL OF FLUID CATALYTIC CRACKING UNIT (FCCU)<!--/a--> <br> <br> </div>
+        This project taken as part of the course-work involved simulating the process of an
+        Fluid Catalytic Cracking Unit (FCCU) and designing control loops for the disturbance
+        control  due to changes in feedstock composition, feed preheat temperature and
+        ambient temperature. <br> <br>
+        The process models were taken from an IEEE paper referenced in the project report.
+        The project involved running the RGA / SVD analysis to determine the control loops,
+        and designing a feedback control for maintaining stability of the system around the
+        operating point. Simulation Softare used is
+        <a href="https://www.vissim.com/downloads.html"> VISSIM </a> <br> <br>
+        Click on below links to access specific documentation regarding this project. <br> <br>
+        <a href="https://www.dropbox.com/s/vkqbinnu7gruc74/EE-332_Project_Report.pdf?dl=0"> REPORT </a> <br>
+        <a href="https://www.dropbox.com/s/x37muwas6spbdh8/PPC_Design_Project_PPT_Final.pdf?dl=0"> PRESENTATION </a> <br>
+        <a href="https://www.dropbox.com/s/q8z1imiaksabltl/Project_Pairing.m?dl=0"> MATLAB CODE </a> <br>
+        <a href="https://www.dropbox.com/s/bl463un4da82akl/FCCU_Design_Ultimate_Multi-loop.vsm?dl=0"> SIMULATION MODEL </a> <br>
+      </div>
+    </div>
+  </div>
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <!--h3>  </h3-->
+      </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="images/PLC_final.jpg" alt="">
+        <div><!--a href="#"-->PLC PROGRAMMING <br>
+        RAIL CAR RAW MATERIAL UNLOADING FOR A POWER PLANT<!--/a--><br> <br> </div>
+        This project involves programming the PLC for unloading wet raw material from rail cars into the
+        storage tanks for a typical batch process. This academic project was a part of the bigger project
+        distributed evenly among the class. Project involved configuring PLCs for communication,
+        building AOI's, programming the functional sequences, controller design and setting up process
+        alarms. <br> <br>
+        In process for creating useful documentation for the project. <br> <br>
+        </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="images/gantry_final.jpg" alt="">
+        <div><!--a href="#"-->PLC PROGRAMMING <br>
+        GANTRY PATH CONTROL<!--/a--> <br> <br> </div>
+        Laboratory exercise involving drawing of letter 'R' using 3-axis position control application
+        of the H-bridge Gantry system. The programming was done on a ControlLogix processor with
+        Ethernet/IP motion and the Kinetix 350 drive. Experiment involved configuring the drive,
+        setting up motion commands and program structured for modularity. Application of such devices
+        include pick and place machine, lathe machines, etc. <br> <br>
+        <a href="https://www.dropbox.com/s/htkl3ceonvs1pqy/Gantry.mp4?dl=0"> VIDEO </a> <br> <br>
+        In process for creating useful documentation for the project. <br> <br>
+        </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="images/rotary_knf_final.png" alt="">
+        <div><!--a href="#"-->PLC PROGRAMMING <br>
+        ROTARY KNIFE MECHANISM CONTROL<!--/a--> <br> <br> </div>
+        This was a laboratory exercise simulating a rotary knife application. The objective of the
+        experiment was to control the rotary knife synchronizes the speed of the conveyor belt and
+        the blade cuts at the defined black line. The programming was done for the Siemens S7-1500
+        processors with PROFINET motion and the SINAMICS S120 drive. <br> <br>
+        <a href="https://www.dropbox.com/s/jqu9qmk7p0b2mt7/Rotary_Knife.mp4?dl=0"> VIDEO </a> <br> <br>
+        In process for creating useful documentation for the project. <br> <br>
+        </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="images/wind_final.jpg" alt="">
+        <div><!--a href="#"-->PLC PROGRAMMING <br>
+        WINDER TENSION CONTROL<!--/a--> <br> <br> </div>
+        This experiment was conducted to simulate the wind - rewind application by controlling
+        the torque, tension and speed of a ribbon when moved from one reel to another, in forward
+        as well as backward directions. This was also conducted using ControlLogix processors. <br> <br>
+        <a href="https://www.dropbox.com/s/jae56ynp0x75eb9/Wind-rewind.mp4?dl=0"> VIDEO </a> <br> <br>
+        In process for creating useful documentation for the project. <br> <br>
+      </div>
+    </div>
+  </div>
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <br> <br>
+        <div class="text1"> OTHER PROJECTS <br> <br> </div>
+        <div>
+        FreeRTOS SCHEDULING: A LITERATURE REVIEW <br>
+        This project was taken up as a part of the course-work which involved studying the
+        scheduling scheme used by FreeRTOS Open Source community. The project involved
+        understanding the method used for implementing the scheduler; discuss its merits
+        over other scheduling schemes and comparing different performance parameters. <br>
+        I had tried implementing the FreeRTOS scheduler for a project and the scheduler
+        source code file is available as part of the documentation. This code might not
+        be the most efficient, as it was the first time I have extensively written a
+        program in embedded C. <br>
+        Click on below links to access specific documentation regarding this project. <br>
+        <a href="#"> REPORT </a>
+        <a href="#"> SOURCE CODE </a> (Links In-Active for now) <br> <br> <br>
+
+        REAL TIME SCHEDULER DESIGN & PROGRAMMING IN AN ARM ENVIRONMENT <br>
+        This was a group project to design a clock driven scheduler to allow execution of
+        periodic tasks (with known execution time) in fixed order in every frame. The
+        processor execution frame size is calculated based on the available set of jobs /
+        tasks to execute. The scheduler is designed such that, based on the available free
+        time in each frame, the frame size is either increased to accommodate the task or
+        task is scheduled in the next frame. <br>
+        Click on below links to access specific documentation regarding this project. <br>
+        <a href="#"> REPORT </a>
+        <a href="#"> SOURCE CODE </a> (Links In-Active for now) <br> <br> <br>
+
+        PATH FINDING ROBOT USING ROBO-VISION <br>
+        The aim of this project is to develop a path finding robot which is capable of
+        avoiding obstacles by itself using a USB web-cam interface and an AT89C2051
+        micro-controller. The images are captured from the camera in real time and are
+        transferred to the computer for processing. MATLAB was used for image processing
+        in order to determine obstacles using edge detection. Based on the image analysis,
+        control commands were provided to the micro-controller on the robot through the
+        RS-232 serial interface. This project was taken up as part of the Final year
+        project during the Bachelor's Degree. <br>
+        No electronic documentation available for this project. <br> <br> <br>
+
+        8051 MICRO-CONTROLLER BASED FIRE MONTIORING & CONTROL SYSTEM <br>
+        This project was the final year project for my Diploma in Digital Electronics.
+        The project involved programming the micro-controller in assembly language.
+        8-channel thermocouple sensor array was used to measure temperature at 8 different
+        locations. Once a fire is sensed by any channel of the thermocouple, the alarm for
+        the respective channel was triggered and a control relay was activated. <br>
+        No electronic documentation available for this project. <br> <br> <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <br> <br>
+        <div class="text1"> PRESENTATIONS <br> <br> </div>
+        <div>
+        <a href="https://www.dropbox.com/s/a6b6ctmmjjsqzfj/PLC_Project_PPT_06MAY15.pdf?dl=0"> MOTION APPLICATION </a> <br>
+        This presentation was an attempt to understand and explain the logic behind a
+        PLC based multi-axis motion control application. The application was to be
+        randomly selected from the internet. No formal documentation of the logic is
+        available. This presentation includes our understanding of implementing this
+        application. <br> <br> <br>
+        <a href="https://www.dropbox.com/s/xxmmwnu336s82km/ACD-PP-Desai_Parth-IQL-31MAR15.pdf?dl=0"> ADAPTIVE CRITIC DESIGN APPLICATION PAPER PRESENTATION </a> <br>
+        This presentation was part of the course-work which involved explaining any
+        technical paper on adaptive learning. I had selected this paper as it was
+        in-line with my course project of Q-learning based soccer agent and
+        demonstrated applications in robotics. <br> <br> <br>
+        <a href="https://www.dropbox.com/s/txrjtao7znxem06/EE5340_APLC_SBMBR_10DEC14.pdf?dl=0"> PLC BASED SEWAGE MANAGEMENT </a> <br>
+        This presentation was part of the course-work for demonstrating the use of
+        PLC's in real-world application of sewage treatment. <br> <br> <br>
+        <a href="https://www.dropbox.com/s/ljbucyusn6s1gl7/Multi-processor%20scheduling%20presentations.pdf?dl=0"> MULTI-PROCESSOR SCHEDULING </a> <br>
+        This presentation was part of the course-work which involved explaining any
+        technical paper on processor scheduling schemes. <br> <br> <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="page4" class="content">
+  <div class="container_12">
+    <div class="grid_12">
+      <h3>Endeavors</h3>
+      <div class="text1"> In addition to all my work I spent a lot of time for leisure activities.  <br> <br> </div>
+    </div>
+    <div class="companies">
+      <div class="text1"> <br> <br> <br> CONSOLE & PC GAMING <br> </div>
+      <div>
+      I constantly keep up with the latest in gaming. More of FPS games than any other styles. My favorite genres
+      being Action, Adventure, Shooter and Role Playing. I'd rather play as a character than handle a bunch of
+      characters. But yes I'm all in for the classic SEGA and Nintendo games (or the so called TV video games). Well
+      for now I'm waiting to get my hands on: <br> <br>
+      </div>
+      <div class="grid_3"> <img src="images/uncharted_logo.jpg" alt="">
+        <div class="text1">UNCHARTED 4: A THIEF'S END</div>
+        <!--a href="#"> Game Review </a--> </div>
+      <div class="grid_3"> <img src="images/deus_ex_logo.jpg" alt="">
+        <div class="text1">DUES EX: MANKIND DIVIDED</div>
+        <!--a href="#"> Game Review </a--> </div>
+      <div class="grid_3"> <img src="images/hitman_logo.jpg" alt="">
+        <div class="text1">HITMAN</div>
+        <!--a href="#"> Game Review </a--> </div>
+      <div class="grid_3"> <img src="images/no_mans_logo.jpg" alt="">
+        <div class="text1">NO MAN'S SKY</div>
+        <!--a href="#"> 2016 Release </a--> </div>
+      <div class="clear"></div>
+    </div>
+    <div class="companies">
+      <div class="text1"> PENCIL ARTIST <br> </div>
+      <div>
+      Apart from my work and gaming I sometimes put myself in sketching. I need a true inspiration or strong
+      motivational force to push me out off the routine to start sketching. I have recently started human
+      figures. Still getting a hang of it and have a long way to go. You can have a look at few sketches from
+      my complete collection below. <br> <br>
+      </div>
+      <div class="grid_3"> <img src="images/halo_3_logo.jpg" alt="">
+        <div class="text1"> MASTER CHIEF</div>
+        <a href="https://www.dropbox.com/s/rbk5sr3jok4vvoz/halo_3.jpg?dl=0"> Full View </a> </div>
+      <div class="grid_3"> <img src="images/wait_logo.jpg" alt="">
+        <div class="text1"> MODEL 1 </div>
+        <a href="https://www.dropbox.com/s/8om8qq4c5qf7j8c/waiting.jpg?dl=0"> Full View </a> </div>
+      <div class="grid_3"> <img src="images/joker_logo.jpg" alt="">
+        <div class="text1"> JOKER </div>
+        <a href="https://www.dropbox.com/s/8671duxqlhzpnn9/why_so_serious.jpg?dl=0"> Full View </a> </div>
+      <div class="grid_3"> <img src="images/wolf_logo.jpg" alt="">
+        <div class="text1"> WEREWOLF </div>
+        <a href="https://www.dropbox.com/s/gbghct9d382j2sq/werewolf.jpg?dl=0"> Full View </a> </div>
+      <div class="clear"></div>
+    </div>
+    <div class="companies">
+      <div>
+      My Other interests include Movies and Music: Who doesn't like them these days.
+      Waiting for the "DAWN OF JUSTICE". LOL. and one of the recently taken up activity
+      is learning to play guitar Couldn't spend much time on this. My finger's hurt. :P
+      <br> <br>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="page5" class="content">
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <h3>Get in Touch</h3>
+        <!--div> </div-->
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="map">
+      <div class="grid_3">
+        <div class="text1">Address</div>
+        <address>
+        <dl>
+          <dt> Parth Milind Desai <br>
+            R & D Intern <br>
+            Nestle Nutrition Inc.<br>
+            Product Technology Centre <br>
+            45 State Street <br>
+            Fremont, MI 49413 <br>
+            United States of America <br>
+          <dd>E-mail: <a href="#" class="link-1">pmdbpc@mst.edu</a></dd>
+          <!--dd>Skype: <a href="#" class="link-1">@skypename</a></dd-->
+        </dl>
+        </address>
+      </div>
+      <div class="grid_3">
+        <div class="text1">&nbsp;</div>
+      </div>
+      <div class="grid_5 prefix_1">
+        Working on getting the "Ask a Question" section operational. It does not work for now. <br> <br>
+        <div class="text1">Ask a Question</div>
+        <form id="form" action="#">
+          <div class="success_wrapper">
+            <div class="success">Contact form submitted!<br>
+              <strong>We will be in touch soon.</strong> </div>
+          </div>
+          <fieldset>
+            <label class="name">
+              <input type="text" value="Name:">
+              <br class="clear">
+              <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> </label>
+            <label class="email">
+              <input type="text" value="E-mail:">
+              <br class="clear">
+              <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> </label>
+            <label class="message">
+              <textarea>Message:</textarea>
+              <br class="clear">
+              <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
+            <div class="clear"></div>
+            <div class="btns"><a data-type="submit" class="link1">Send</a>
+              <div class="clear"></div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="copy"> <a onClick="goToByScroll('page1'); return false;" href="#"><!--img src="images/footer_logo.png" alt=""-->
+        Parth Milind Desai </a> | &copy; 2015 | <!--a href="#">Privacy Policy--> <br>
+        Website Template Design by: <a href="http://www.templatemonster.com/">TemplateMonster.com</a> </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</footer>
+</body>
+</html>
